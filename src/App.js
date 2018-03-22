@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Validation from "./Validation/Validation";
 
 class App extends Component {
   state = {
@@ -15,8 +16,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <ol>
-          <1>Create an input field (in App component) with a change listener which outputs the length of the entered text below it (e.g. in a paragraph).</li>
+        {/* <ol>        
           <2>Create a new component (=> ValidationComponent) which receives the text length as a prop</li>
           <3>Inside the ValidationComponent, either output "Text too short" or "Text long enough" depending on the text length (e.g. take 5 as a minimum length)</li>
           <4>Create another component (=> CharComponent) and style it as an inline box (=> display: inline-block, padding: 16px, text-align: center, margin: 16px, border: 1px solid black).</li>
@@ -24,8 +24,8 @@ class App extends Component {
           <6>When you click a CharComponent, it should be removed from the entered text.</li>
         </ol>
         <p>Hint: Keep in mind that JavaScript strings are basically arrays!</p> */}
-        <input onChange={(event) => this.onChangeHandler(event)} />
-        <p>{this.state.inputLength}</p>
+        <input onChange={(event) => this.onChangeHandler(event)} />       
+        <Validation textLength={this.state.inputLength} />
       </div>
     );
   }
