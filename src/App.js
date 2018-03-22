@@ -40,12 +40,9 @@ class App extends Component {
 
   render() {   
     return (
-      <div className="App">
-        {/* <ol>            
-          <6>When you click a CharComponent, it should be removed from the entered text.</li>
-        </ol>
-        */}
+      <div className="App">      
         <input 
+          type="text"
           value={this.state.input}
           className="Input" 
           onChange={(event) => this.onChangeHandler(event)}
